@@ -1,0 +1,159 @@
+.details {
+  padding: 3.5rem;
+  background: var(--secondary-color);
+  background: var(--background-color);
+  background: #3a3652;
+  margin: 0 auto;
+  background: url("../images/video-background.jpg") center center/cover
+    no-repeat;
+  // border: 1px solid rgb(15, 184, 99);
+}
+
+.details__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.details__tag {
+  display: none;
+}
+
+.pill-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  // padding: 0.35rem 0.85rem;
+  font-size: 1.1rem;
+  font-weight: 400;
+  // text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: #38a3b5; /* Your subtle teal/cyan accent */
+  color: var(--primary-color);
+  text-shadow: -1px 1px 2px;
+}
+
+/* Left bracket */
+.pill-badge::before {
+  content: "[";
+  // opacity: 0.5; /* Dimmed bracket for a sleek tech feel */
+  font-weight: 600;
+}
+
+/* Right bracket */
+.pill-badge::after {
+  content: "]";
+  // opacity: 0.5;
+  font-weight: 600;
+}
+
+.details__grid {
+  display: grid;
+  width: 100%;
+  place-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  // border: 1px solid violet;
+}
+
+.details__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 500px;
+  text-align: center;
+  // border: 1px solid violet;
+}
+
+.details__heading {
+  font-size: clamp(1.3rem, 4vw, 1.6rem);
+  font-weight: 400;
+  letter-spacing: 0.03rem;
+}
+
+.details__description {
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.details__button {
+  text-align: center;
+  font-weight: 600;
+  padding: 0.5rem 2rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  border-radius: 50px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--primary-color);
+  }
+}
+
+.details__image img {
+  display: block;
+  width: clamp(350px, 35vw, 400px);
+  transition: transform 0.3s ease;
+}
+
+.details__image:hover img {
+  transform: rotate(1deg);
+}
+
+@media (max-width: 768px) {
+  .details {
+    padding: 2rem 0 2rem;
+  }
+
+  //   .details__container {
+  //   gap: 1rem;
+  // }
+
+  .details__grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+  }
+
+  .details__tag {
+    display: inline-block;
+    position: relative;
+    font-size: clamp(1.8rem, 4vw, 2.53rem);
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+  }
+
+  .details__tag::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+    width: 70%;
+    height: 1px;
+    transform: translateX(-50%);
+    background: linear-gradient(
+      90deg,
+      transparent,
+      var(--primary-color),
+      transparent
+    );
+  }
+
+  .details__image--first {
+    order: 1;
+  }
+  .details__content--first {
+    order: 2;
+  }
+  .details__image--second {
+    order: 3;
+    margin-top: 4rem;
+  }
+  .details__content--second {
+    order: 4;
+  }
+}

@@ -1,0 +1,65 @@
+@use "nav";
+@use "hero";
+@use "features";
+@use "preview";
+@use "modal";
+@use "screenshots";
+@use "details";
+@use "stats";
+@use "testimonials";
+@use "download";
+@use "pricing";
+@use "footer";
+@use "utility";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #08c0dd;
+  --secondary-color: #262431;
+  --tertiary-color: #2f2c3d;
+  --background-color: #3b3850;
+}
+
+html,
+body {
+  font-family: "Outfit", sans-serif;
+  color: #fff;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  scroll-padding-top: 2.2rem;
+}
+
+.container {
+  width: min(100% - 3rem, 1200px);
+  margin-inline: auto;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.u-hover-lift {
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+.u-hover-lift:hover {
+  transform: translateY(-2px);
+}
